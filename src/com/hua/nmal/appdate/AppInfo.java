@@ -45,7 +45,7 @@ public class AppInfo {
 	private static boolean isGiftCodePromoEnd = false;
 	private static String libraryId;
 	
-	private DownloadInfo di;
+	private DownloadInfo downloadInfo;
 	
 	/**
 	 * AppInfo class constructor.
@@ -55,8 +55,8 @@ public class AppInfo {
 	 */
 	public AppInfo(Context context, String appInfoUrl, String appId) {
 		super();
-		AppInfo.appInfoUrl = appInfoUrl;
-		AppInfo.appId = appId;
+		AppInfo.appInfoUrl = appInfoUrl;//APP_INFO_URL = "http://webtvapi.now.com/";
+		AppInfo.appId = appId;//APP_INFO_APP_ID = "03";
 		AppInfo.context = context;
 	}
 
@@ -272,7 +272,7 @@ public class AppInfo {
 	 */
 	public void downloadInfo() {
 		cancelDownloadInfo();
-		di = new DownloadInfo();
+		downloadInfo = new DownloadInfo();
 		String dlURL;
         
 		dlURL = appInfoUrl+getAppId()+"/"+"1"+"/"+"getAppInfo";
@@ -287,9 +287,9 @@ public class AppInfo {
 
 			Log.d(TAG, "AppInfo URL: " + appInfoUrl);
 			if (android.os.Build.VERSION.SDK_INT < 11){//before honeycomb
-				di.execute(httpPost);
+				downloadInfo.execute(httpPost);
 			} else{
-				di.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,httpPost);
+				downloadInfo.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,httpPost);
 			}
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
@@ -302,8 +302,8 @@ public class AppInfo {
 	 */
 	public void cancelDownloadInfo() {
 		Log.d("InfoService", "cancelDownloadInfo() called");
-		if (di != null) {
-			di.cancel(true);
+		if (downloadInfo != null) {
+			downloadInfo.cancel(true);
 		}
 	}
 	

@@ -23,6 +23,7 @@ import android.widget.TextView;
 import com.hua.activity.R;
 import com.hua.nowplayerjunior.adapter.PagerAdapterFr;
 import com.hua.nowplayerjunior.constants.Constants;
+import com.hua.nowplayerjunior.utils.LogUtils2;
 import com.pccw.nmal.appdata.AppInfo;
 import com.pccw.nmal.appdata.JsonZip;
 import com.pccw.nmal.appdata.JsonZip.ZipType;
@@ -125,9 +126,11 @@ public class RootCategoryFragment extends Fragment{
     	
     	String rootcatId = VOD.getInstance().getVODRootNodeID();
     	VODCategoryNodeData rootCategory = VOD.getInstance().getVODCategoryByNodeId(rootcatId);
+    	LogUtils2.e("rootCategory=="+rootCategory);
     	if (rootCategory != null) {
     		//LinkedHashMap<String, VODCategoryNodeData> maincategoryList = rootCategory.childNodes;
     		List<VODCategoryNodeData> RootCategoryList = new ArrayList<VODCategoryNodeData>(rootCategory.childNodes.values());
+    		LogUtils2.e("RootCategoryList=="+RootCategoryList.size());
     		List<String> categoryIdList = new ArrayList<String>(RootCategoryList.size());
 
     		for (int i = 0; i < RootCategoryList.size(); i++) {
@@ -138,6 +141,25 @@ public class RootCategoryFragment extends Fragment{
     		final ViewPager pager = (ViewPager)view.findViewById(R.id.viewpager);
     		pager.setAdapter(this.mPagerAdapter);
     	}
+    	
+    	if(rootCategory == null){
+    		int lenght = 3;
+    		String [] tempContent = {"title1","title2","title3"};
+    		String [] tempID = {"id1","id2","id3"};
+    		List<String> categoryIdList = new ArrayList<String>(lenght);
+
+    		for (int i = 0; i < lenght; i++) {
+    			CategoryFragmentName[i] = tempContent[i];
+    			categoryIdList.add(tempID[i]);
+    		}
+    		this.mPagerAdapter  = new PagerAdapterFr(getChildFragmentManager(), categoryIdList, CategoryFragmentName, this);
+    		final ViewPager pager = (ViewPager)view.findViewById(R.id.viewpager);
+    		pager.setAdapter(this.mPagerAdapter);
+    		
+    	}
+    	
+    	
+    	
     }
     
     @Override
@@ -149,7 +171,7 @@ public class RootCategoryFragment extends Fragment{
 		String getvodCatalog = jsonZip.getJSONData(ZipType.PKG, "vodCatalog.json");
 
 		if (jsonZip.shouldUpdateJSONZipVersion(ZipType.PKG) && !jsonZip.isDownloading()) {
-			showProgressDialog();
+//			showProgressDialog();
 			jsonZip.startDownload(ZipType.PKG, callback);
 			
 		}else {

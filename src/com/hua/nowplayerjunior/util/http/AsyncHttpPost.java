@@ -73,6 +73,7 @@ public class AsyncHttpPost extends AsyncTask<Object, Void, String> {
         
         // Create a new HttpClient and Post Header
         HttpClient httpclient = new DefaultHttpClient(httpParameters);
+//        HttpClient httpClient2 = new DefaultHttpClient(httpParameters);
         
         try{
          

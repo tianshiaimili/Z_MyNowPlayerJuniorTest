@@ -10,6 +10,11 @@ public class Constants {
 //	public static final String APP_INFO_URL = "http://10.37.157.12:8080/nowplayerjr/app_info.txt";
 //	public static final String APP_INFO_URL = "http://10.37.157.12:8080/nowplayerjr2/app_info.txt";
 	public static final String APP_INFO_APP_ID = "03";
+	/**
+	 * 可参考 http://blog.csdn.net/wufen1103/article/details/7846691
+	 * %n$ms：代表输出的是字符串，n代表是第几个参数，设置m的值可以在输出之前放置空格 
+	 * %n$md：代表输出的是整数，n代表是第几个参数，设置m的值可以在输出之前放置空格，也可以设为0m,在输出之
+	 */
 	public static final String JSON_ZIP_VERSION_PREFIX = "/%1$s";
 	public static final String PIXEL_LOG_URL = "http://nowplayer.now.com/plog.gif";
 	public static final String PIXEL_LOG_APP_NAME = "AndroidJrApp";

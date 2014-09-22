@@ -24,6 +24,7 @@ import android.widget.TextView;
 import com.hua.activity.R;
 import com.hua.gz.utils.DisplayUtils;
 import com.hua.nowplayerjunior.constants.Constants;
+import com.hua.nowplayerjunior.utils.LogUtils2;
 import com.pccw.nmal.appdata.AppInfo;
 import com.pccw.nmal.appdata.JsonZip;
 import com.pccw.nmal.appdata.JsonZip.ZipType;
@@ -47,6 +48,8 @@ public class CategoryFragment extends Fragment{
 	private CategoryListAdapter categoryListAdapter;
 	private RootCategoryFragment parent;
 	
+	private TextView  categoryTextView;
+	
 	public static CategoryFragment newInstance(String CategoryID, RootCategoryFragment parent)
 	{
 		CategoryFragment f = new CategoryFragment();
@@ -64,7 +67,7 @@ public class CategoryFragment extends Fragment{
 			VOD.getInstance().clearVodChannelList();
 			jsonZip.startDownload(ZipType.PKG, callback);
 		}else {
-			
+			LogUtils2.e("setupCategoryView ----------");
 			if ((!VOD.getInstance().isRootCategoryListCompleted()) || (!VOD.getInstance().isVODDataListCompleted())){
 				parseRootCategoryJSON();
 				parseVODDatalJSON();
@@ -242,6 +245,7 @@ public class CategoryFragment extends Fragment{
 		inflater = getActivity().getLayoutInflater();
 		initArguments(savedInstanceState);
 		view = inflater.inflate(R.layout.category_fragment, container, false);
+		categoryTextView = (TextView) view.findViewById(R.id.category_textview);
     	setupCategoryView();
 		return view;
 	}

@@ -6,8 +6,17 @@
     android:background="@drawable/series_bg_repeat"
     android1:orientation="vertical" >
 
-    
-        <GridView
+    <TextView
+        android1:id="@+id/category_textview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="内容即将呈现............"
+		android:textSize="24sp"
+		android:visibility="gone"
+		android:background="#FFCCCC"
+         />
+
+    <GridView
         android:id="@+id/categorygridview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -16,10 +25,7 @@
         android:animationCache="true"
         android:gravity="center"
         android:numColumns="2"
-        android:scrollingCache="true"
-        >
-
+        android:scrollingCache="true" >
     </GridView>
-
 
 </LinearLayout>

@@ -35,6 +35,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.hua.activity.R;
@@ -795,19 +796,47 @@ public class NowplayerJrActivity extends FragmentActivity implements
 
 	}
 
-	public void enableBackButton(boolean b, String text) {
-		// TODO Auto-generated method stub
+	private void checkOverlapping() {
+		
+		navTitleText.getParent().requestLayout();
+		if(navTitleText.getVisibility() == View.VISIBLE && 
+				backButton.getVisibility() == View.VISIBLE){
+			
+			RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) navTitleText.getLayoutParams();
+			if(navTitleText.getLeft() < backButton.getRight()){
+				params.addRule(RelativeLayout.CENTER_HORIZONTAL, 0);
+				params.addRule(RelativeLayout.RIGHT_OF, R.id.nav_back_btn);
+			}else {
+				params.addRule(RelativeLayout.CENTER_HORIZONTAL, 1);
+				params.addRule(RelativeLayout.RIGHT_OF, 0);
+			}
+			
+			navTitleText.setLayoutParams(params);
+			
+		}
+		
+	}
+	
+	public void enableBackButton(boolean isEnabled, String text) {
 
+		backButton = (Button) findViewById(R.id.nav_back_btn);
+		backButton.setVisibility(isEnabled ? View.VISIBLE : View.INVISIBLE);
+		backButton.setText(text);
+		checkOverlapping();
+		
 	}
 
-	public void enableBackButton(boolean b) {
-		// TODO Auto-generated method stub
+	public void enableBackButton(boolean isEnabled) {
 
+		enableBackButton(isEnabled, LanguageHelper.getLocalizedString("navigationbar.item.back"));
+		
 	}
 
 	public void showTitleLogo() {
-		// TODO Auto-generated method stub
 
+		navLogoImage.setVisibility(View.VISIBLE);
+		navTitleText.setVisibility(View.INVISIBLE);
+		
 	}
 
 	public void refreshTab() {
