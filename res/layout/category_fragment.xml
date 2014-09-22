@@ -10,11 +10,11 @@
         android1:id="@+id/category_textview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:background="#FFCCCC"
         android:text="内容即将呈现............"
-		android:textSize="24sp"
-		android:visibility="gone"
-		android:background="#FFCCCC"
-         />
+        android:textSize="24sp"
+        android:visibility="gone" />
 
     <GridView
         android:id="@+id/categorygridview"

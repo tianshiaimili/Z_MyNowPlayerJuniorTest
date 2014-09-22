@@ -49,6 +49,8 @@ public class CategoryFragment extends Fragment{
 	private RootCategoryFragment parent;
 	
 	private TextView  categoryTextView;
+	private boolean isShowTextView;
+	
 	
 	public static CategoryFragment newInstance(String CategoryID, RootCategoryFragment parent)
 	{
@@ -61,7 +63,13 @@ public class CategoryFragment extends Fragment{
 	}
 	
 	public void setupCategoryView() {  
-        JsonZip jsonZip = new JsonZip(this.getActivity(), AppInfo.getJsonVersionPath(), Constants.JSON_ZIP_VERSION_PREFIX, LanguageHelper.getCurrentLanguage());
+        
+		if(!isShowTextView){
+			categoryTextView.setVisibility(View.VISIBLE);
+			return;
+		}
+		
+		JsonZip jsonZip = new JsonZip(this.getActivity(), AppInfo.getJsonVersionPath(), Constants.JSON_ZIP_VERSION_PREFIX, LanguageHelper.getCurrentLanguage());
 		if (jsonZip.shouldUpdateJSONZipVersion(ZipType.PKG) && !jsonZip.isDownloading()) {
 			showProgressDialog();
 			VOD.getInstance().clearVodChannelList();
