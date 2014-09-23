@@ -224,8 +224,8 @@ public class NowplayerJrActivity extends FragmentActivity implements
 		// }
 		// }
 
-		tempTabList.add("Live");
 		tempTabList.add("Programs");
+		tempTabList.add("Live");
 		tempTabList.add("JrClub");
 		tempTabList.add("Interactive");
 		tempTabList.add("Setting");
