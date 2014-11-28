@@ -130,7 +130,7 @@ public class SeriesFragment extends UIEventBaseFragment {
 	public void onResume() {
 		super.onResume();
 		String text = VOD.getInstance().getVODCategoryByNodeId(CategoryID).getName();
-		((NowplayerJrActivity)getActivity()).enableBackButton(true, text);
+		((MainActivity)getActivity()).enableBackButton(true, text);
 	}
 	
 	private class EpisodeListAdapter extends ArrayAdapter<VODData> {

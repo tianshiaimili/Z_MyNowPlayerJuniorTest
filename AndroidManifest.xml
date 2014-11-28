@@ -26,7 +26,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.hua.nowplayerjunior.activity.NowplayerJrLandingActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize"
+             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,10 +36,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.hua.nowplayerjunior.activity.NowplayerJrActivity"
+            android:name="com.hua.nowplayerjunior.activity.MainActivity"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleInstance"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="adjustResize"
+            >
         </activity>
         <activity
             android:name="com.hua.nowplayerjunior.activity.TutorialActivity"
@@ -46,6 +50,11 @@
         <activity
             android:name="com.hua.nowplayerjunior.activity.VideoPlayerActivity"
             android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity android:name="com.hua.nowid.activity.AddAppointmentUserActivity"
+            android:screenOrientation="portrait"
+            >
         </activity>
 
         <receiver android:name="com.hua.nowplayerjunior.receiver.NotificationStartupReceiver" >

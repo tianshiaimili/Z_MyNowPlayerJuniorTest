@@ -12,12 +12,13 @@
     <string name="search_hint">搜尋節目</string>
     
     <!-- for tabbar -->
-	<string name="tabbar.item.live.title">頻道</string>
-	<string name="tabbar.item.program.title">自選節目</string>
+	<string name="tabbar.item.live.title">预约</string>
+	<string name="tabbar.item.program.title">我的</string>
 	<string name="tabbar.item.movie.title">電影</string>
 	<string name="tabbar.item.videoexpress.title">影視點播站</string>
 	<string name="tabbar.item.userguide.title">服務通知</string>
-	<string name="tabbar.item.setting.title">設定</string>
+	<string name="tabbar.item.setting.title">更多</string>
+	<string name="tabbar.item.interactive.title">发现</string>
 	
 	<string name="navigationbar.item.back">返回</string>
 	

@@ -165,8 +165,8 @@ public class RootCategoryFragment extends Fragment{
     @Override
     public void onResume(){
 		super.onResume();
-		((NowplayerJrActivity)getActivity()).enableBackButton(false);
-		((NowplayerJrActivity)getActivity()).showTitleLogo();
+		((MainActivity)getActivity()).enableBackButton(false);
+		((MainActivity)getActivity()).showTitleLogo();
 		JsonZip jsonZip = new JsonZip(this.getActivity(), AppInfo.getJsonVersionPath(), Constants.JSON_ZIP_VERSION_PREFIX, LanguageHelper.getCurrentLanguage());
 		String getvodCatalog = jsonZip.getJSONData(ZipType.PKG, "vodCatalog.json");
 

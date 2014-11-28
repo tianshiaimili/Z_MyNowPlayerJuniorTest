@@ -83,10 +83,7 @@ public class NowplayerJrLandingActivity extends BaseActivity implements Download
 
 	public void downloadInfo() {
 		
-//		appInfo.setDownloadConfigCallback(this);
-//    	appInfo.downloadInfo();
-//		
-		Intent intent = new Intent(getBaseContext(), NowplayerJrActivity.class);
+		Intent intent = new Intent(getBaseContext(), MainActivity.class);
 		startActivity(intent);
 		finish();
 	}
@@ -110,7 +107,7 @@ public class NowplayerJrLandingActivity extends BaseActivity implements Download
 	
 	
 	 private void toContinue() {
-			Intent Intent = new Intent(getApplicationContext(), NowplayerJrActivity.class);
+			Intent Intent = new Intent(getApplicationContext(), MainActivity.class);
 			startActivity(Intent);
 			landing.cancel();
 			finish();

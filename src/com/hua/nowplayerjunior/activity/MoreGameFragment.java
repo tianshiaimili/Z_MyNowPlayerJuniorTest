@@ -42,7 +42,7 @@ public class MoreGameFragment extends Fragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		((NowplayerJrActivity)getActivity()).enableBackButton(true, getResources().getString(R.string.tabbar_item_setting_title));
+		((MainActivity)getActivity()).enableBackButton(true, getResources().getString(R.string.tabbar_item_setting_title));
 		webView = (WebView)getActivity().findViewById(R.id.webView);
 		WebViewUtils.initInternalBrowser(getActivity(), webView);
 		WebViewUtils.limitWebView(webView, true, true, true, true);
@@ -128,9 +128,9 @@ public class MoreGameFragment extends Fragment {
 				view.clearHistory(); // clear history, so that cannot go back to previous language
 			}
 			if (view.canGoBack()) {
-				((NowplayerJrActivity)getActivity()).enableBackButton(true);
+				((MainActivity)getActivity()).enableBackButton(true);
 			} else {
-				((NowplayerJrActivity)getActivity()).enableBackButton(true, getResources().getString(R.string.tabbar_item_setting_title));
+				((MainActivity)getActivity()).enableBackButton(true, getResources().getString(R.string.tabbar_item_setting_title));
 			}
 		}
 	}

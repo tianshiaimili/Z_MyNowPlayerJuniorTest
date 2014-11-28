@@ -10,7 +10,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 
 import com.hua.activity.R;
-import com.hua.nowplayerjunior.activity.LiveChannelFragment;
+import com.hua.nowplayerjunior.activity.AddCustomerFragment;
 import com.hua.nowplayerjunior.activity.ProgramFragment;
 import com.hua.nowplayerjunior.activity.SeriesFragment;
 import com.hua.nowplayerjunior.activity.VideoPlayerActivity;
@@ -51,7 +51,7 @@ public class PlayerControlProxy implements Callback, ProxyServerControl.Callback
 	private VideoType videoType;
 	private boolean videoFragmentRunning;
 	private boolean isEmbeddedView;
-	private LiveChannelFragment liveChannelFragment;
+	private AddCustomerFragment liveChannelFragment;
 
 	public void setVideoPlayerActivity(VideoPlayerActivity videoPlayerActivity) {
 		this.videoPlayerActivity = videoPlayerActivity;
@@ -92,7 +92,7 @@ public class PlayerControlProxy implements Callback, ProxyServerControl.Callback
 	public void setIsEmbeddedView(boolean isEmbeddedView) {
 		this.isEmbeddedView = isEmbeddedView;
 	}
-	public void setLiveChannelFragment(LiveChannelFragment liveChannelFragment) {
+	public void setLiveChannelFragment(AddCustomerFragment liveChannelFragment) {
 		this.liveChannelFragment = liveChannelFragment;
 	}
 	//////
@@ -174,7 +174,7 @@ public class PlayerControlProxy implements Callback, ProxyServerControl.Callback
 		
 		if (isEmbeddedView) {
 			videoPlayerFragment = new VideoPlayerFragment();
-			liveChannelFragment.setVideoPlayerFragment(videoPlayerFragment);
+//			liveChannelFragment.setVideoPlayerFragment(videoPlayerFragment);
 //			videoPlayerFragment.setLiveChannelFragment(liveChannelFragment);
 			Bundle arguments = new Bundle();
 			arguments.putString("channel", channelNo);
@@ -383,9 +383,9 @@ public class PlayerControlProxy implements Callback, ProxyServerControl.Callback
 			videoPlayerActivity.finish();
 		}
 		if (isEmbeddedView && liveChannelFragment != null && videoPlayerFragment != null) {
-			liveChannelFragment.setVideoPlayerFragment(null);
+//			liveChannelFragment.setVideoPlayerFragment(null);
 			liveChannelFragment.getChildFragmentManager().beginTransaction().remove(videoPlayerFragment).commit();
-			liveChannelFragment.resetLiveChannelViews();
+//			liveChannelFragment.resetLiveChannelViews();
 		}
 		clearAllProperties();
 		

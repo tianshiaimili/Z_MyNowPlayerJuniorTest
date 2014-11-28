@@ -4,6 +4,7 @@
     <color name="blue">#0000FF</color>
     <color name="TabBar_Title_Normal">#ffffff</color>
     <color name="TabBar_Title_Active">#fe6000</color>
+    <color name="TabBar_Title_Active2">#6D6D6D</color>
     <color name="program_time_color">#b5d5ff</color>
     <color name="GenreBarText">#FFFFFF</color>
     <color name="OnDemandTableTitle">#00347a</color> 
@@ -30,5 +31,12 @@
 	<color name="TutOrangeButtonTextShadowColor">#99450e</color>
 	<color name="TutBlackButtonTextColor">#ffffff</color>
 	<color name="TutBlackButtonTextShadowColor">#000000</color>
+	<color name="split_line_color">#000000</color>
+	<color name="homebg_color">#EFEFEF</color>
+	
+	<!-- 预约的颜色设置 -->
+	<color name="yuyue_headusername_text_color">#000000</color>
+	<color name="yuyue_usersex_text_color">#CCCCCC</color>
+	<color name="yuyue_listview_divider">#CCCCCC</color>
 	
 </resources>

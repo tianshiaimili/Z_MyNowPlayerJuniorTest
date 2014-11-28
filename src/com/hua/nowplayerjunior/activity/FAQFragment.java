@@ -39,7 +39,7 @@ public class FAQFragment extends Fragment {
 		webView.setWebViewClient(new FaqWebViewClient());
 	    webView.setBackgroundColor(0);
 	    webView.setLayerType(WebView.LAYER_TYPE_SOFTWARE, null);
-		((NowplayerJrActivity)getActivity()).enableBackButton(true, getResources().getString(R.string.tabbar_item_setting_title));
+		((MainActivity)getActivity()).enableBackButton(true, getResources().getString(R.string.tabbar_item_setting_title));
 	}
 	
 	@Override
@@ -85,9 +85,9 @@ public class FAQFragment extends Fragment {
 		public void onPageFinished(WebView view, String url) {
 			super.onPageFinished(view, url);
 			if (view.canGoBack()) {
-				((NowplayerJrActivity)getActivity()).enableBackButton(true);
+				((MainActivity)getActivity()).enableBackButton(true);
 			} else {
-				((NowplayerJrActivity)getActivity()).enableBackButton(true, getResources().getString(R.string.tabbar_item_setting_title));
+				((MainActivity)getActivity()).enableBackButton(true, getResources().getString(R.string.tabbar_item_setting_title));
 			}
 			if (requestClearHistory) {
 				view.clearHistory();

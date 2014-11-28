@@ -47,7 +47,8 @@
         android:textStyle="bold"
         android:shadowColor="#b3d1ff"
         android:shadowDy="-1"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+         />
     
         <Button
             android:id="@+id/nav_back_btn"
@@ -87,12 +88,12 @@
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_marginBottom="0dp"
         android:scaleType="fitXY"
-        android:src="@drawable/tabbar_bg" />
+        android:src="@drawable/tabbar_bg3" />
 
 
     
@@ -104,7 +105,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignTop="@+id/imageView1"
         android:layout_marginBottom="0dp"
-        android:background="@color/TabBar_Title_Active"
+        android:background="@color/TabBar_Title_Active2"
         android:layout_below="@id/fragment_container"
         android:clipChildren="false"
         android:clipToPadding="false" >
@@ -130,7 +131,7 @@
 
             <ImageButton
                 android:id="@+id/tabbarImageButton1"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="fill_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_centerInParent="false"
@@ -139,8 +140,18 @@
                 android:onClick="TabItemTapped"
                 android:paddingBottom="5dp"
                 android:src="@drawable/tabicon_channel"
-                android:tag="btn" />
+                android:tag="btn" 
+                />
 
+            <TextView
+                android:id="@+id/split_line1"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:background="@color/split_line_color"
+				android:layout_alignParentRight="true"
+	             />
+            
+            
             <TextView
                 android:id="@+id/tabbarTextView1"
                 android:layout_width="wrap_content"
@@ -149,7 +160,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="2dp"
                 android:tag="title"
-                android:text="頻道"
+                android:text="@string/yuyue"
                 android:textColor="@color/TabBar_Title_Normal"
                 android:textSize="12sp" />
 
@@ -187,6 +198,14 @@
                 android:src="@drawable/tabicon_channel"
                 android:tag="btn" />
 
+                <TextView
+                android:id="@+id/split_line2"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:background="@color/split_line_color"
+				android:layout_alignParentRight="true"
+	             />
+            
             <TextView
                 android:id="@+id/tabbarTextView2"
                 android:layout_width="wrap_content"
@@ -195,7 +214,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="2dp"
                 android:tag="title"
-                android:text="頻道"
+                android:text="@string/mine"
                 android:textColor="@color/TabBar_Title_Normal"
                 android:textSize="12sp" />
 
@@ -235,6 +254,14 @@
                 android:src="@drawable/tabicon_channel_active"
                 android:tag="btn" />
 
+                <TextView
+                android:id="@+id/split_line3"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:background="@color/split_line_color"
+				android:layout_alignParentRight="true"
+	             />
+            
             <TextView
                 android:id="@+id/tabbarTextView3"
                 android:layout_width="wrap_content"
@@ -243,7 +270,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="2dp"
                 android:tag="title"
-                android:text="頻道"
+                android:text="@string/find"
                 android:textColor="@color/TabBar_Title_Normal"
                 android:textSize="12sp" />
 
@@ -279,6 +306,7 @@
                 android:src="@drawable/tabicon_channel_active"
                 android:tag="btn" />
 
+            
             <TextView
                 android:id="@+id/tabbarTextView4"
                 android:layout_width="wrap_content"
@@ -287,7 +315,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="2dp"
                 android:tag="title"
-                android:text="頻道"
+                android:text="@string/more"
                 android:textColor="@color/TabBar_Title_Normal"
                 android:textSize="12sp" />
 

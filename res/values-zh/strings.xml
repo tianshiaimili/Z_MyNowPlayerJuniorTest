@@ -28,7 +28,7 @@
 	<string name="nowid_setting_giftcode_expired">禮品編碼的用戶:\n您的禮品編碼已失效</string>
 	<string name="nowid_setting_giftcode_expiry_date">禮品編碼的用戶:\n有效時間至:</string>
 	
-	<string name="tabbar.item.interactive.title">互動區</string>
+	<string name="tabbar.item.interactive.title">发现</string>
 	<string name="patrick_n_friends_title">Patrick n friends \n生字卡</string>
 	<string name="patrick_n_friends_title_nav">Patrick n friends</string>
 	<string name="do_you_know_menu_title">小知識</string>
@@ -77,5 +77,6 @@
     <string name="notification.close.label">關閉</string>
     
     <string name="interactive_sing_with_olive_title">Sing with Olive</string>
+    
     
 </resources>

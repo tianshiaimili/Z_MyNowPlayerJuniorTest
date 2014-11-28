@@ -81,4 +81,16 @@
     
     <string name="interactive_sing_with_olive_title">Sing with Olive</string>
     
+    <string name="yuyue">预约</string>
+    <string name="mine">我的</string>
+    <string name="find">发现</string>
+    <string name="more">更多</string>
+    <string name="title_yuyue">预约</string>
+    <string name="title_yuyue_mind">我的预约</string>
+    <string name="title_yuyue_finish">完成预约</string>
+    <string name="title_yuyue_addUser">添加预约人</string>
+    
+    
+    
+    
 </resources>

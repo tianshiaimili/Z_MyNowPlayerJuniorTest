@@ -96,8 +96,8 @@ public class SettingFragment extends UIEventBaseFragment implements Callback {
 		super.onActivityCreated(savedInstanceState);
 		chkStream3G.setChecked(PreferenceHelper.getPreferenceBoolean(PreferenceHelper.ALLOW_STREAM_IN_3G));
 		userSetting = new UserSetting(getActivity());
-		((NowplayerJrActivity)getActivity()).enableBackButton(false);
-		((NowplayerJrActivity)getActivity()).showTitleLogo();
+		((MainActivity)getActivity()).enableBackButton(false);
+		((MainActivity)getActivity()).showTitleLogo();
 		refreshLabel();
 	}
 	

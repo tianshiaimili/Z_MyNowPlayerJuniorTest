@@ -22,7 +22,7 @@ public class LogUtils2 {
 //				Log.e(className + "." + methodName + "():" + lineNumber,
 //						message);
 				
-				Log.e(TAG,className + "��" + lineNumber+"��:"+
+				Log.e(TAG,className + "：" + lineNumber+"行:"+
 						message);
 			}
 		}
@@ -43,7 +43,7 @@ public class LogUtils2 {
 //				Log.e(className + "." + methodName + "():" + lineNumber,
 //						message);
 				
-				Log.e(tag,className + "��" + lineNumber+"��:"+
+				Log.e(tag,className + "：" + lineNumber+"行:"+
 						message);
 			}
 		}
@@ -61,10 +61,10 @@ public class LogUtils2 {
 						.lastIndexOf(".") + 1);
 				String methodName = elements[3].getMethodName();
 				int lineNumber = elements[3].getLineNumber();
-//				Log.d("TAG",className + "." + methodName + "():" + lineNumber+"��"+
+//				Log.d("TAG",className + "." + methodName + "():" + lineNumber+"行"+
 //						message);
 				
-				Log.d(TAG,className + " �� " + lineNumber+"�У�"+
+				Log.d(TAG,className + " ： " + lineNumber+"行："+
 						message);
 			}
 		}
@@ -83,10 +83,10 @@ public class LogUtils2 {
 						.lastIndexOf(".") + 1);
 				String methodName = elements[3].getMethodName();
 				int lineNumber = elements[3].getLineNumber();
-//				Log.d("TAG",className + "." + methodName + "():" + lineNumber+"��"+
+//				Log.d("TAG",className + "." + methodName + "():" + lineNumber+"行"+
 //						message);
 				
-				Log.d(TAG,className + " �� " + lineNumber+"�У�"+
+				Log.d(TAG,className + " ： " + lineNumber+"行："+
 						message);
 			}
 		}
@@ -106,7 +106,7 @@ public class LogUtils2 {
 				int lineNumber = elements[3].getLineNumber();
 //				Log.i(className + "." + methodName + "():" + lineNumber,
 //						message);
-				Log.i(TAG,className + " �� " + lineNumber+"�У�"+
+				Log.i(TAG,className + " ： " + lineNumber+"行："+
 						message);
 			}
 		}
@@ -127,7 +127,7 @@ public class LogUtils2 {
 				int lineNumber = elements[3].getLineNumber();
 //				Log.i(className + "." + methodName + "():" + lineNumber,
 //						message);
-				Log.i(TAG,className + " �� " + lineNumber+"�У�"+
+				Log.i(TAG,className + " ： " + lineNumber+"行："+
 						message);
 			}
 		}
@@ -149,7 +149,7 @@ public class LogUtils2 {
 //				Log.w(className + "." + methodName + "():" + lineNumber,
 //						message);
 				
-				Log.w(TAG,className + " �� " + lineNumber+"�У�"+
+				Log.w(TAG,className + " ： " + lineNumber+"行："+
 						message);
 			}
 		}
@@ -171,7 +171,7 @@ public class LogUtils2 {
 //				Log.w(className + "." + methodName + "():" + lineNumber,
 //						message);
 				
-				Log.w(TAG,className + " �� " + lineNumber+"�У�"+
+				Log.w(TAG,className + " ： " + lineNumber+"行："+
 						message);
 			}
 		}
@@ -192,7 +192,7 @@ public class LogUtils2 {
 				int lineNumber = elements[3].getLineNumber();
 //				Log.v(className + "." + methodName + "():" + lineNumber,
 //						message);
-				Log.v(TAG,className + " �� " + lineNumber+"�У�"+
+				Log.v(TAG,className + " ： " + lineNumber+"行："+
 						message);
 				
 			}
@@ -214,7 +214,7 @@ public class LogUtils2 {
 				int lineNumber = elements[3].getLineNumber();
 //				Log.v(className + "." + methodName + "():" + lineNumber,
 //						message);
-				Log.v(TAG,className + " �� " + lineNumber+"�У�"+
+				Log.v(TAG,className + " ： " + lineNumber+"行："+
 						message);
 				
 			}

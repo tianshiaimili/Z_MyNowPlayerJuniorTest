@@ -54,7 +54,7 @@ public class SettingLanguageFragment extends BaseFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		((NowplayerJrActivity)getActivity()).enableBackButton(true, getResources().getString(R.string.tabbar_item_setting_title));
+		((MainActivity)getActivity()).enableBackButton(true, getResources().getString(R.string.tabbar_item_setting_title));
 	}
 
 	private class ButtonOnClickListener implements OnClickListener {
@@ -86,8 +86,8 @@ public class SettingLanguageFragment extends BaseFragment {
 			jsonZip.clearJSONZip(ZipType.PKG);
 			jsonZip.clearJSONZip(ZipType.EPG);
 			VOD.getInstance().clearVodChannelList();
-			((NowplayerJrActivity)getActivity()).refreshTab();
-			((NowplayerJrActivity)getActivity()).enableBackButton(true, getResources().getString(R.string.tabbar_item_setting_title));
+			((MainActivity)getActivity()).refreshTab();
+			((MainActivity)getActivity()).enableBackButton(true, getResources().getString(R.string.tabbar_item_setting_title));
 		}
 		
 	}

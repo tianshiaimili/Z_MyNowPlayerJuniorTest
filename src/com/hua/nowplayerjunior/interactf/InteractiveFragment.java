@@ -20,7 +20,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.hua.activity.R;
-import com.hua.nowplayerjunior.activity.NowplayerJrActivity;
+import com.hua.nowplayerjunior.activity.MainActivity;
 import com.hua.nowplayerjunior.activity.UIEventBaseFragment;
 import com.hua.nowplayerjunior.constants.Constants;
 import com.hua.nowplayerjunior.utils.MyAlertDialog;
@@ -61,8 +61,8 @@ public class InteractiveFragment extends UIEventBaseFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		((NowplayerJrActivity) getActivity()).enableBackButton(false);
-		((NowplayerJrActivity) getActivity()).showTitleLogo();
+		((MainActivity) getActivity()).enableBackButton(false);
+		((MainActivity) getActivity()).showTitleLogo();
 	}
 
 	public void loadListView() {
